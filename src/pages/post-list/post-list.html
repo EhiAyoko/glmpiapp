@@ -6,7 +6,7 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Posts</ion-title>
+    <ion-title>GLMPI HERstories</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,7 +16,18 @@
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  
+  <span text-center *ngIf="loggedin">
+  <h2>Please log into your account to see HERstories</h2>
+  <!-- <ion-button shape="round" expand="block" color="warning">Warning</ion-button> -->
+</span>
+
+  <!-- <div *ngIf="loggedin"> -->
+    <ion-card text-center>
+      <ion-card-header>
+        Checkout the most recent HERstories available!
+      </ion-card-header>
+    </ion-card>
+
   <ion-list class="post-list">
 
     <ion-item *ngFor="let item of items" (tap)="itemTapped($event, item)">
@@ -33,7 +44,7 @@
     </ion-item>
 
   </ion-list>
-
+<!-- </div> -->
   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
    <ion-infinite-scroll-content></ion-infinite-scroll-content>
  </ion-infinite-scroll>

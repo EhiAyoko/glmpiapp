@@ -16,9 +16,12 @@ import { WooProvider } from '../providers/woo/woo';
 import { NgxStripeModule } from 'ngx-stripe';
 import { Configure } from '../providers/configure/configure';
 
+import { ResultPage } from "../pages/result/result";
+
 @NgModule({
   declarations: [
     MyApp,
+    ResultPage,
     TabsPage
   ],
   imports: [

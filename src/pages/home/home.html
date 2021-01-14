@@ -5,88 +5,56 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>WP Ionic</ion-title>
+    <ion-title>GLMPI Mobile</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-card>
+  <ion-card text-center>
+    <ion-img width="180" height="180" radius="15px" src="assets/imgs/glmpilogo.png"></ion-img>
+    
 
-    <img src="assets/imgs/mac-iphone-500.jpg"/>
-
-    <ion-card-content>
+    <ion-card-content text-center>
 
       <ion-card-title class="big-title">
-        WP Ionic
+        Welcome to the GLMPI App
       </ion-card-title>
 
-      <p>This app is an example of integrating WordPress with an Ionic mobile app using the WP-API. To learn how to configure this app, please visit <a href="http://scottbolinger.com/ionic-wordpress-app/" target="_blank">scottbolinger.com</a></p>
+      <p>Welcome to the first GLMPI Mobile App. The girls from GLMPI, got the opportunity to build this app, learn more about the journey here</p>
 
-      <p><strong>Features:</strong></p>
+      <div *ngIf="loggedin">
+        <p>&nbsp;</p>
 
-      <ul>
-        <li>Posts, including CPTs, taxonomies, and more</li>
-        <li>Pages and custom API endpoints</li>
-        <li>Login and hide/show membership content</li>
-        <li>WooCommerce REST API integration with Stripe payments</li>
-        <li>Tabs and/or side menu</li>
-      </ul>
-
-      <p><strong>Setup Instructions:</strong></p>
-
-      <ol>
-        <li>Visit providers/configure/configure.ts and add your website url. To use WooCommerce, add your auth key as described. To use Stripe, add your publishable key in app.module.ts.</li>
-        <li>Install and activate this plugin on your WordPress site: https://github.com/scottopolis/sb-app-integration</li>
-      </ol>
-
-      <button ion-button block (click)="pushPage('PostListPage')">View Posts</button>
-
+      <button ion-button block (click)="pushPage('PostListPage')">View HERstories</button>
+</div>
     </ion-card-content>
 
   </ion-card>
 
   
   <ion-card>
+    <ion-card-content text-center>
 
-    <img src="assets/imgs/login.jpg"/>
-
-    <ion-card-content>
-
-      <ion-card-title class="big-title">
-        Login
+      <ion-card-title class="big-title" text-center>
+        Login to see HERstories, Complete your daily check ins and More!
       </ion-card-title>
 
-      <p>You can hide content until a member is logged in. For example, a video will appear below after you login (use the side menu).</p>
+      <!-- <p>You can hide content until a member is logged in. For example, a video will appear below after you login (use the side menu).</p> -->
 
       <button ion-button block (click)="openLoginModal()"><span *ngIf="!loggedin">Login</span><span *ngIf="loggedin">Logout</span></button>
+      <p>Don't have a login? Please create an account on <a href="https://glmpiapp.com/register">our app website</a></p>
 
       <div *ngIf="loggedin">
         <p>&nbsp;</p>
-        <h2>MEMBERS ONLY CONTENT</h2>
-        <p>Here's your super special bonus...</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XtdQz6piFpI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2>GLMPI MEMBERS ONLY</h2>
+        <p>Here's today's live and HERstory...</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1sK6vNrJbZ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
     </ion-card-content>
 
-  </ion-card>
-
-  <ion-card>
-
-    <img src="assets/imgs/woo-placeholder.jpg"/>
-
-    <ion-card-content>
-
-      <ion-card-title class="big-title">
-        WooCommerce
-      </ion-card-title>
-
-      <p>This app can show your products, add to cart, and checkout with Stripe all using the WooCommerce REST API. (Some setup is required)</p>
-
-      <button ion-button block (click)="pushPage('WooListPage')">Visit Shop</button>
-
-    </ion-card-content>
+    <!-- add social media icons here -->
 
   </ion-card>
   

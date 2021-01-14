@@ -33,7 +33,7 @@ export class LoginProvider {
 
       formData.append("username", form.user);
       formData.append("password", form.pass);
-      formData.append("security", 'my-secure-phrase');
+      formData.append("security", '3ll@neA1miuwu');
 
       if( logout ) {
         formData.append("logout", "true" );

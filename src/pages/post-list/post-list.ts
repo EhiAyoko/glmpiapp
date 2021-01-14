@@ -14,6 +14,7 @@ export class PostListPage {
 	page: number = 1;
 	route: string;
 
+
 	constructor(
 		public navCtrl: NavController, 
 		public navParams: NavParams,
@@ -28,7 +29,6 @@ export class PostListPage {
 		// put your desired WP-API route here. URL params, CPTs, and custom routes all OK
 		this.route = url + 'wp-json/wp/v2/posts'
 	}
-
 	ionViewDidLoad() {
 		this.loadPosts()
 	}

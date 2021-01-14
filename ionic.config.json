@@ -1,8 +1,8 @@
 {
   "name": "WPIonic",
-  "app_id": "",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "id": "12a324a1"
 }
